@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-
 import com.boomzoned.android_code_samples.R;
 
 public class FirstFragment extends Fragment {
@@ -19,7 +18,9 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false);
+        View viewRoot = inflater.inflate(R.layout.fragment_first, container, false);
+//        DataBindingUtil.bind(viewRoot)
+        return viewRoot;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
